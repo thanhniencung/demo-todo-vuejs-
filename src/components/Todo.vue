@@ -23,11 +23,12 @@ export default {
   props: ["todo"],
   methods: {
     checkTodo: function(e) {
-      if (e.target.checked) {
+      this.todo.completed = e.target.checked;
+      /*if (e.target.checked) {
         this.todo.completed = true;
       } else {
         this.todo.completed = false;
-      }
+      }*/
     },
 
     handledeleteTodo: function() {
